@@ -1,0 +1,28 @@
+{
+  "env": {
+    "browser": true,
+    "es2024": true, // Ensure compatibility with latest ES features
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:tailwindcss/recommended"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect" // Automatically detect the React version
+    }
+  },
+  "ignorePatterns": ["dist", ".eslintrc.cjs"],
+  "plugins": ["react", "@typescript-eslint", "react-hooks", "tailwindcss"],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "tailwindcss/no-custom-classname": [
+      "warn",
+      { "callees": ["class", "classnames", "clsx", "twMerge", "cn"] }
+    ]
+  }
+}
