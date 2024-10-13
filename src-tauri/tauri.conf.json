@@ -12,10 +12,19 @@
   "app": {
     "windows": [
       {
+        "label": "main",
         "title": "tauri-app",
         "width": 800,
-        "height": 600
-        
+        "height": 600,
+        "visible": false
+      },
+      {
+        "label": "splashscreen",
+        "width": 800,
+        "height": 600,
+        "decorations": false,
+        "resizable": false,
+        "url": "splashscreen.html"
       }
     ],
     "security": {
